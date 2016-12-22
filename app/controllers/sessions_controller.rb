@@ -8,7 +8,7 @@ post '/login' do
     login(@user)
     redirect '/'
   else
-    @error = "Why you trying to hack my info bruh?"
+    @error = "You butched up the info... try again"
     erb :"/user/login.html"
   end
 end

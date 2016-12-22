@@ -1,0 +1,11 @@
+<div class="user-details">
+   <% if current_user %>
+   <center>
+     <h1>Welcome Back, <%= current_user.username %>!</h1>
+   </center>
+   <center>
+   </center>
+   <%else%>
+     <p>Want to join the chill?<a href="/user/new">Lez do this!</a></p>
+   <% end %>
+ </div>
