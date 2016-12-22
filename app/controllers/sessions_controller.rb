@@ -9,7 +9,7 @@ post '/login' do
     redirect '/'
   else
     @error = "You butched up the info... try again"
-    erb :"/user/login.html"
+    erb :"/users/login.html"
   end
 end
 
