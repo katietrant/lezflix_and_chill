@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   validates :email, :username, uniqueness: true
   validates  :email, :username, :password_hash, presence: true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
+  include BCrypt
 
   def password
     @password ||= BCrypt::Password.new(password_hash)

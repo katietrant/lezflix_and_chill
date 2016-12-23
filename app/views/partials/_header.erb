@@ -1,11 +1,11 @@
 <nav>
-  <% if current_user %>
-  	<a href="/logout">Log Out</a><br>
-    <a href="/users/<%= current_user.id %>">Hey, <%=current_user.id%>!</a>
+  <% if logged_in? %>
+    <form action="/logout" method="POST">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Swing Out">
+    </form>
   <% else %>
   	<p><a href="/login">Log In</a><br>
     <a href="/users/new">Lez Be Friends</a><p>
   <% end %>
-  <a href="/">Home</a>
-
 </nav>

@@ -10,7 +10,7 @@ gem 'bcrypt'
 gem 'hirb'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'yt', '~> 0.28.0'
 gem 'rake'
 
 gem 'shotgun', '~>0.9.1'

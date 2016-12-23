@@ -6,6 +6,10 @@ Coupling.delete_all
 
 User.create(username: "Katee", email:"katee@katee.com", password_hash:"password")
 User.create(username: "Jen", email:"jen@jen.com", password_hash:"password")
+User.create(username: "kim", email:"kim@kim.com", password_hash:"password")
+User.create(username: "ken", email:"ken@ken.com", password_hash:"password")
+User.create(username: "kody", email:"kody@kody.com", password_hash:"password")
+
 
 Show.create(title:"Pretty Little Liars", gay_rating: 4)
 Show.create(title:"Grey's Anatomy", gay_rating: 3)

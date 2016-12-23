@@ -1,22 +1,28 @@
 get '/users/new' do
-   erb :"/users/new.html"
- end
+  erb :"/users/new.html"
+end
 
 
- post '/users' do
-     @user = User.new(params[:user])
-     if @user.save
-       login(@user)
-       redirect "/users/#{@user.id}"
-     else
-       erb :"/users/new.html"
-     end
- end
-
+post '/users' do
+  p params
+  if params[:user][:password] == params[:confirm_password]
+    @user = User.new(params[:user])
+    if @user.save
+      login(@user)
+      redirect "/"
+    else
+      @error = "Lez try that again shall we?"
+      erb :"/users/new.html"
+    end
+  else
+    @error = "Oh no! Your passwords aren't homo-geneous..."
+    erb :"/users/new.html"
+  end
+end
 
  get '/users/:id' do
    @user = User.find(params[:id])
-   erb :'/users/show.html'
+   erb :"/users/show.html"
  end
 
 

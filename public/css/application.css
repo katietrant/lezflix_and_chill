@@ -2,7 +2,7 @@ body {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	font-family: verdana, arial, helvetica, sans-serif;
-	color: #ccc;
+	color: black;
 	background-color: #f442bc;
 	text-align: center;
 	/* part 1 of 2 centering hack */
@@ -27,9 +27,20 @@ body {
 html>body #content {
 	width: 370px; /* ie5win fudge ends */
 	}
-
+/*
 #youtube {
   width: 250px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 4px solid black;
+  color: black;
+}*/
+
+#montage{
+	width: 500px;
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
