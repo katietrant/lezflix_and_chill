@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $("button").on("click",function(){
     console.log("what now?")
-  })
+
 
   $.get(
     "https://www.googleapis.com/youtube/v3/search",{
@@ -23,8 +23,6 @@ $(document).ready(function() {
         $("#youtube ul").append("<li>"+output+"</li>")
       })
     }
-  )
-    // function handleAPILoaded() {
-    //   $('#youtube').attr('disabled', false);
-    // }
+   )
+  })
 });
