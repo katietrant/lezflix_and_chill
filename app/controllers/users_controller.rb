@@ -4,8 +4,6 @@ get '/users/new' do
 
 
  post '/users' do
-   p params
-   if params[:user][:password] == params[:confirm_password]
      @user = User.new(params[:user])
      if @user.save
        login(@user)
@@ -13,12 +11,9 @@ get '/users/new' do
      else
        erb :"/users/new.html"
      end
-     @error = "Passwords do not match bruh"
-     erb :"/users/new.html"
-   end
  end
 
- 
+
  get '/users/:id' do
    @user = User.find(params[:id])
    erb :'/users/show.html'
