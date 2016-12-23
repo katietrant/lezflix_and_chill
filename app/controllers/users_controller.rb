@@ -4,10 +4,10 @@ end
 
 
 post '/users' do
-  p params
   if params[:user][:password] == params[:confirm_password]
     @user = User.new(params[:user])
     if @user.save
+      p @user
       login(@user)
       redirect "/"
     else
