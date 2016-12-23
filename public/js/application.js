@@ -1,13 +1,14 @@
 $(document).ready(function() {
-  $("button").on("click",function(){
-    console.log("what now?")
-
+  $("#youtube").on("submit",function(event){
+    event.preventDefault();
+    var $form = $(this);
+    var formData = $form.serialize();
 
   $.get(
     "https://www.googleapis.com/youtube/v3/search",{
       part: 'snippet',
       maxResults: 10,
-      q: 'emison',
+      q: formData,
       type: 'video',
       videoEmbeddable: 'true',
       videoType: 'any',
@@ -19,8 +20,12 @@ $(document).ready(function() {
         console.log(item)
         var pic = item.snippet.thumbnails.medium.url;
         var title = item.snippet.title;
+        var vidID = item.id.videoId;
+        var link = "https://www.youtube.com/watch?v="+vidID
+        console.log(link)
         output = title;
-        $("#youtube ul").append("<li>"+output+"</li>")
+
+        $("#youtube ul").append("<li><a href="+link+">"+title+"</a></li>")
       })
     }
    )
