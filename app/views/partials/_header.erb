@@ -1,11 +1,13 @@
 <nav>
   <% if logged_in? %>
+    <a href="/">There's No Place Like Home</a>
     <form action="/logout" method="POST">
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="Swing Out">
     </form>
   <% else %>
+    <a href="/">There's No Place Like Home</a>
   	<p><a href="/login">Log In</a><br>
-    <a href="/users/new">Lez Be Friends</a><p>
+    <a href="/users/new">Lez Be Friends</a></p>
   <% end %>
 </nav>
