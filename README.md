@@ -1,7 +1,8 @@
 This program will allow the user to see current shows that have a lesbian story line.
 A user can add to tv shows of past lesbian storylines
 There will be an in memory of page for all the lame story lines that ended with lesbians dying... which is alot
-It will connect to imdb to look up more about the characters and actresses who played them
+It will connect to imdb to look up more about the characters and actresses who played them.
+Check out the site on heroku at lezflix-and-chill.herokuapp.com
 
 
 <!-- > **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
