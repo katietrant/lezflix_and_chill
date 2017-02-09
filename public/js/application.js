@@ -7,11 +7,12 @@ $(document).ready(function() {
   $.get(
     "https://www.googleapis.com/youtube/v3/search",{
       part: 'snippet',
-      maxResults: 10,
+      maxResults: 1,
       q: formData,
       type: 'video',
       videoEmbeddable: 'true',
       videoType: 'any',
+      order: 'date',
       key: 'AIzaSyAg_Dkisf32L-2JS_cKX0EKJu9CDeXU_t0'
     },
     function(response){
