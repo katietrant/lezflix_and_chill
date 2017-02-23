@@ -1,7 +1,6 @@
 #Lezflix and Chill
 
-Lezflix and Chill is a heroku hosted web app that allows users to users to see current shows that have a lesbian story line. Users are able to look up and watch clips of their favorite lesbian relationships. 
-
+Lezflix and Chill is a heroku hosted sinatra website that allows users to see current shows that have a lesbian story line. Users are able to look up and watch clips of their favorite lesbian relationships using the YouTube api.
 [Hosted on Heroku](http://lezflix-and-chill.herokuapp.com).
 
 ## Getting Started
